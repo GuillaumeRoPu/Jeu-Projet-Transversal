@@ -1,16 +1,31 @@
+using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MouseInputHandler : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private PlayerController _mouse;
+
+    public Vector2 WorldPosition { get ; private set; }
+    public event Action Clicked;
+
+    private void OnLook(InputValue value)
     {
-        
+        WorldPosition = Camera.main.ScreenToWorldPoint(value.Get<Vector2>());
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        _mouse = FindFirstObjectByType<PlayerController>();
+    }
+
+    //private void Update()
+    //{
+    //    WorldPosition = _mouse.mousePos;
+    //}
+
+    private void OnClick(InputValue _)
+    {
+        Clicked?.Invoke();
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Vector2 targetPos;
-    private Vector2 mousePos;
+    public Vector2 mousePos { get; private set; }
     [SerializeField][Range(0.1f,40)] private float moveSpeed;
     public bool _canMove { get; private set; }
 
@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _canMove = true;
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
     void Update()
