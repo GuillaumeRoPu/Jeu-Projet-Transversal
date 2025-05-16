@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class CreateTrash : MonoBehaviour
 {
+    [SerializeField] private Acte1Data _acte1Data;
+
     [SerializeField] private Vector2 _trashSpawnOrigin;
     [SerializeField] private Vector2 _trashSpawnArea;
     [SerializeField] private GameObject _prefab;
-    [SerializeField] private float _spawnCD;
+    private float _trashUpdatedCD;
     private float _lastSpawnTime;
 
 
@@ -22,10 +24,14 @@ public class CreateTrash : MonoBehaviour
 
     private void Update()
     {
-        if (_lastSpawnTime + _spawnCD < Time.time)
+        if (Time.time < _acte1Data.acte1Timer) 
         {
-            Debug.Log("CreatedTrash");
-            CreatingTrash();
+            if (_lastSpawnTime + _trashUpdatedCD < Time.time)
+            {
+                Debug.Log("CreatedTrash");
+                CreatingTrash();
+            }
+            _trashUpdatedCD = Mathf.Lerp(_acte1Data.trashSpawnCD, _acte1Data.trashScaledCD, Time.time / _acte1Data.acte1Timer);
         }
     }
 

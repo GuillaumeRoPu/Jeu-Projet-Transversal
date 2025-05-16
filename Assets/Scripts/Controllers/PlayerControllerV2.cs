@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerControllerV2 : MonoBehaviour
 {
+    [SerializeField] private Acte1Data _acte1Data;
+
     private Transform _transform;
     private Collider2D _collider;
     private Rigidbody2D _rb;
@@ -11,8 +13,6 @@ public class PlayerControllerV2 : MonoBehaviour
     private bool isFacingRight = true;
     private Vector2 _moveInput;
     private float _direction;
-
-    private int _trashCounter;
 
     private bool isInTrigger = false;
     private Collider2D currentCollider;
@@ -61,8 +61,8 @@ public class PlayerControllerV2 : MonoBehaviour
     private void PickUpTrash(Collider2D x)
     {
         x.SendMessage("Delete");
-        _trashCounter += 1;
-        Debug.Log(_trashCounter);
+        _acte1Data.trashCollected += 1;
+        Debug.Log(_acte1Data.trashCollected);
     }
 
     private void OnTriggerStay2D(Collider2D other)
