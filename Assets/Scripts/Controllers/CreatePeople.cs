@@ -10,9 +10,11 @@ public class CreatePeople : MonoBehaviour
     private float _peopleUpdatedCD;
     
     private float _lastSpawnTime;
+    private float _ratio;
 
     private void Update()
     {
+        _ratio = Time.time / _acte1Data.acte1Timer;
         if (Time.time < _acte1Data.acte1Timer && _acte1Data.peopleCanSpawnTimer < Time.time)
         {
             if (_lastSpawnTime + _peopleUpdatedCD < Time.time)
@@ -20,7 +22,7 @@ public class CreatePeople : MonoBehaviour
                 Debug.Log("CreatedTrash");
                 CreatingPeople();
             }
-            _peopleUpdatedCD = Mathf.Lerp(_acte1Data.peopleSpawnCD, _acte1Data.peopleScaledCD, Time.time / _acte1Data.acte1Timer);
+            _peopleUpdatedCD = Mathf.Lerp(_acte1Data.peopleSpawnCD, _acte1Data.peopleScaledCD, _acte1Data.peopleSpawnCDScale.Evaluate(_ratio));
         }
     }
 
