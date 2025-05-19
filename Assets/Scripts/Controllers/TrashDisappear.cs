@@ -1,7 +1,9 @@
 using UnityEngine;
 
-public class TrashDisappear : MonoBehaviour
+public class TrashController : MonoBehaviour
 {
+
+
     public void Delete()
     {
         gameObject.SetActive(false);

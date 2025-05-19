@@ -9,6 +9,10 @@ public class PlayerControllerV2 : MonoBehaviour
     private Rigidbody2D _rb;
 
     [SerializeField] private float _moveSpeed;
+    [SerializeField] private float _slowedMoveSpeed;
+    private float _updatedMoveSpeed = 3f;
+    [SerializeField] private Vector2 _playerPoint;
+
 
     private bool isFacingRight = true;
     private Vector2 _moveInput;
@@ -23,6 +27,7 @@ public class PlayerControllerV2 : MonoBehaviour
         TryGetComponent(out _transform);
         TryGetComponent(out _collider);
         TryGetComponent(out _rb);
+        _updatedMoveSpeed = _moveSpeed;
     }
 
 
@@ -30,7 +35,6 @@ public class PlayerControllerV2 : MonoBehaviour
     {
         _moveInput.x = Input.GetAxisRaw("Horizontal");
         _moveInput.y = Input.GetAxisRaw("Vertical");
-        Move();
         Flip();
 
         if (isInTrigger && Input.GetKeyDown(KeyCode.E))
@@ -38,12 +42,27 @@ public class PlayerControllerV2 : MonoBehaviour
             PickUpTrash(currentCollider);
         }
 
+
+        Vector2 checkPosition = new Vector2(transform.position.x, transform.position.y) + _playerPoint;
+        Collider2D hit = Physics2D.OverlapPoint(checkPosition);
+
+        if (hit.CompareTag("People"))
+        {
+            _updatedMoveSpeed = _slowedMoveSpeed;
+            Move();
+        }
+        else
+        {
+            _updatedMoveSpeed = _moveSpeed;
+            Move();
+        }
+
     }
 
     private void Move()
     {
-        _rb.linearVelocityX = _moveInput.x*_moveSpeed;
-        _rb.linearVelocityY = _moveInput.y*_moveSpeed;
+        _rb.linearVelocityX = _moveInput.x* _updatedMoveSpeed;
+        _rb.linearVelocityY = _moveInput.y* _updatedMoveSpeed;
     }
 
     private void Flip()
@@ -83,4 +102,9 @@ public class PlayerControllerV2 : MonoBehaviour
         }
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(new Vector2(transform.position.x, transform.position.y) + _playerPoint, 0.5f);
+    }
 }

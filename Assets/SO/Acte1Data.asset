@@ -15,7 +15,10 @@ MonoBehaviour:
   acte1Timer: 60
   trashSpawnCD: 5
   trashScaledCD: 1
-  peopleCanSpawnTimer: 20
+  peopleCanSpawnTimer: 5
   peopleSpawnCD: 5
-  peopleScaleCD: 1
-  peopleMinMaxYScale: {x: 1, y: 10}
+  peopleScaledCD: 1
+  peopleSpeedRange: {x: 2, y: 5}
+  peopleSizeRange: {x: 3, y: 10}
+  trashCollected: 23
+  score: 0

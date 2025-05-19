@@ -9,8 +9,9 @@ public class Acte1Data : ScriptableObject
     public float trashScaledCD;
     public float peopleCanSpawnTimer;
     public float peopleSpawnCD;
-    public float peopleScaleCD;
-    public Vector2 peopleMinMaxYScale;
+    public float peopleScaledCD;
+    public Vector2 peopleSpeedRange;
+    public Vector2 peopleSizeRange;
 
     public int trashCollected;
     public int score;

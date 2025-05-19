@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1233727511467510450}
   - component: {fileID: 2817873760644484068}
   - component: {fileID: 8995167680686207553}
+  - component: {fileID: 907634025342051626}
   m_Layer: 0
   m_Name: Square
   m_TagString: Trash
@@ -145,5 +146,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce53e53bf1049ce489ce40fc990c1066, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &907634025342051626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5296964165703004626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae39e65719b89544bd0db506d4c0c61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
