@@ -21,12 +21,11 @@ public class PeopleController : MonoBehaviour
     private void Update()
     {
         _boundsLeftRight = new Vector2(_collider2D.bounds.min.x, _collider2D.bounds.max.x);
-
         if (_isEnabled)
         {
             if (_goesLeft)
             {
-                _rb.linearVelocityX = -_moveSpeed;
+                //_rb.linearVelocityX = -_moveSpeed;
                 if (_boundsLeftRight.y <= _limitsLeftRight.x)
                 {
                     Destroy(gameObject);
@@ -34,7 +33,7 @@ public class PeopleController : MonoBehaviour
             }
             else
             {
-                _rb.linearVelocityX = _moveSpeed;
+                //_rb.linearVelocityX = _moveSpeed;
                 if (_boundsLeftRight.x >= _limitsLeftRight.y)
                 {
                     Destroy(gameObject);
@@ -52,11 +51,11 @@ public class PeopleController : MonoBehaviour
         _goesLeft = goesLeft;
         if (goesLeft)
         {
-            transform.position = new Vector3(_limitsLeftRight.y + _boundsLeftRight.x - transform.position.x, spawnY, transform.position.z);
+            transform.position = new Vector3(_limitsLeftRight.y + _collider2D.size.x/2, spawnY, transform.position.z);
         }
         else
         {
-            transform.position = new Vector3(_limitsLeftRight.x + _boundsLeftRight.y - transform.position.x, spawnY, transform.position.z);
+            transform.position = new Vector3(_limitsLeftRight.x - _collider2D.size.x/2, spawnY, transform.position.z);
         }
         _isEnabled = true;
     }

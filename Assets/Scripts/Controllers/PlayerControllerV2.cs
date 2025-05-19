@@ -13,13 +13,16 @@ public class PlayerControllerV2 : MonoBehaviour
     private float _updatedMoveSpeed = 3f;
     [SerializeField] private Vector2 _playerPoint;
 
-
     private bool isFacingRight = true;
     private Vector2 _moveInput;
     private float _direction;
 
     private bool isInTrigger = false;
     private Collider2D currentCollider;
+
+    [Space(5)]
+    [Header("Tests")]
+    [SerializeField] GameObject floatingTextPrefab;
 
 
     private void Awake()
@@ -61,8 +64,8 @@ public class PlayerControllerV2 : MonoBehaviour
 
     private void Move()
     {
-        _rb.linearVelocityX = _moveInput.x* _updatedMoveSpeed;
-        _rb.linearVelocityY = _moveInput.y* _updatedMoveSpeed;
+        _rb.linearVelocityX = _moveInput.x * _updatedMoveSpeed - 0.3f * _updatedMoveSpeed;
+        _rb.linearVelocityY = _moveInput.y * _updatedMoveSpeed - 0.3f * _updatedMoveSpeed;
     }
 
     private void Flip()
@@ -79,10 +82,24 @@ public class PlayerControllerV2 : MonoBehaviour
 
     private void PickUpTrash(Collider2D x)
     {
-        x.SendMessage("Delete");
         _acte1Data.trashCollected += 1;
-        Debug.Log(_acte1Data.trashCollected);
+        TrashController trashController = x.gameObject.GetComponent<TrashController>();
+        if (trashController == null)
+        {
+            Debug.LogError("Neuille frr");
+        }
+        _acte1Data.trashCollected += 1;
+        ShowPickupText(trashController._value);
     }
+
+
+    void ShowPickupText(float value)
+    {
+        GameObject textObj = Instantiate(floatingTextPrefab, transform.position + Vector3.up * 1.5f, Quaternion.identity);
+        textObj.SetActive(true);
+        textObj.GetComponent<FloatingText>().SetText("+ " + value);
+    }
+
 
     private void OnTriggerStay2D(Collider2D other)
     {

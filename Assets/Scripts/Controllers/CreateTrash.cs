@@ -39,6 +39,7 @@ public class CreateTrash : MonoBehaviour
     {
         _lastSpawnTime = Time.time;
         GameObject clone = Instantiate(_prefab, new Vector3(Random.Range(-_trashSpawnArea.x/2 + _trashSpawnOrigin.x, _trashSpawnArea.x/ 2 + _trashSpawnOrigin.x), Random.Range(-_trashSpawnArea.y/2 + _trashSpawnOrigin.y, _trashSpawnArea.y/2 + _trashSpawnOrigin.y), 0), Quaternion.identity);
+        clone.gameObject.SetActive(true);
         clone.transform.SetParent(transform);
     }
 

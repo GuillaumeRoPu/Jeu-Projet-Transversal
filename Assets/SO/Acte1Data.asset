@@ -15,10 +15,58 @@ MonoBehaviour:
   acte1Timer: 60
   trashSpawnCD: 5
   trashScaledCD: 1
+  trashSpawnCDScale:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   peopleCanSpawnTimer: 5
   peopleSpawnCD: 5
   peopleScaledCD: 1
   peopleSpeedRange: {x: 2, y: 5}
   peopleSizeRange: {x: 3, y: 10}
+  peopleSpawnCDScale:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 3.1340249
+      outSlope: 3.1340249
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.049019605
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0.031103432
+      outSlope: 0.031103432
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.060606062
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   trashCollected: 23
   score: 0
