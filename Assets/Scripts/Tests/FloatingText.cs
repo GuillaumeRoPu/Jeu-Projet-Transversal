@@ -24,7 +24,7 @@ public class FloatingText : MonoBehaviour
         // Destroy after lifetime
         if (timer >= lifetime)
         {
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 

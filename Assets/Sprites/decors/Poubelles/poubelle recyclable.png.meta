@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      poubelle recyclable_0: -7676391496501762766
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

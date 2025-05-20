@@ -19,6 +19,7 @@ public class Acte1Data : ScriptableObject
     [Header("TrashCombo")]
     public float maxCombo;
     public float comboAddValue;
+    public float comboTimeDecrease;
 
     [Space(5)]
     [Header("PeopleDatasTime")]
@@ -35,5 +36,5 @@ public class Acte1Data : ScriptableObject
     [Space(5)]
     [Header("Scores")]
     public int trashCollected;
-    public int score;
+    public float score;
 }

@@ -43,6 +43,9 @@ MonoBehaviour:
   timeBeforePointLoss: 2
   timeBetweenPointLoss: 1
   pointsLost: 1
+  maxCombo: 2
+  comboAddValue: 0.1
+  comboTimeDecrease: 3
   peopleCanSpawnTimer: 5
   peopleSpawnCD: 1
   peopleScaledCD: 1

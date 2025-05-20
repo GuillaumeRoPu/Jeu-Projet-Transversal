@@ -32,6 +32,9 @@ public class PlayerControllerV2 : MonoBehaviour
     private Vector2 _moveInput;
     private float _direction;
 
+    private float _comboTimer;
+    public float _comboValue { get; private set; }
+
     private bool isInTrigger = false;
     private Collider2D currentCollider;
 
@@ -64,7 +67,9 @@ public class PlayerControllerV2 : MonoBehaviour
         if (isInTrigger && Input.GetKeyDown(KeyCode.E))
         {
             PickUpTrash(currentCollider);
+            ComboAdd();
         }
+        Combo();
         Move();
     }
 
@@ -125,11 +130,31 @@ public class PlayerControllerV2 : MonoBehaviour
         {
             Debug.LogError("Neuille frr");
         }
-        _acte1Data.score += trashController._value;
-        ShowPickupText(trashController._value);
+        _acte1Data.score += trashController._value * _comboValue;
+        ShowPickupText(trashController._value * _comboValue);
         trashController.Delete();
     }
 
+    private void ComboAdd()
+    {
+        _comboTimer = _acte1Data.comboTimeDecrease;
+        _comboValue += _acte1Data.comboAddValue;
+        _comboValue = Mathf.Clamp(_comboValue, 1, _acte1Data.maxCombo);
+    }
+
+    private void Combo()
+    {
+        if (_comboValue > 1)
+            _comboTimer -= Time.deltaTime;
+        if (_comboTimer < 0 && _comboValue > 1)
+        {
+            _comboValue -= _acte1Data.comboAddValue;
+            _comboValue = Mathf.Clamp(_comboValue, 1, _acte1Data.maxCombo);
+            _comboTimer = _acte1Data.comboTimeDecrease;
+            if (_comboValue == 1)
+                _comboTimer = 0;
+        }
+    }
 
     void ShowPickupText(float value)
     {

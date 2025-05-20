@@ -30,7 +30,7 @@ public class PeopleController : MonoBehaviour
         {
             if (_goesLeft)
             {
-                //_rb.linearVelocityX = -_moveSpeed;
+                _rb.linearVelocityX = -_moveSpeed;
                 if (_boundsLeftRight.y <= _limitsLeftRight.x)
                 {
                     Destroy(gameObject);
@@ -38,17 +38,17 @@ public class PeopleController : MonoBehaviour
             }
             else
             {
-                //_rb.linearVelocityX = _moveSpeed;
+                _rb.linearVelocityX = _moveSpeed;
                 if (_boundsLeftRight.x >= _limitsLeftRight.y)
                 {
                     Destroy(gameObject);
                 }
             }
         }
-
-        if(_collider2D.bounds.Contains(new Vector2(transform.position.x, transform.position.y) + _playerController._playerPoint))
+        if(_collider2D.bounds.Contains(new Vector2(_playerController.gameObject.transform.position.x, _playerController.gameObject.transform.position.y) + _playerController._playerPoint))
         {
             _spriteRenderer.color = new Color(_spriteRenderer.color.r, _spriteRenderer.color.g, _spriteRenderer.color.b, 0.5f);
+            Debug.Log("Alpha changed");
         }
         else
         {
@@ -65,11 +65,11 @@ public class PeopleController : MonoBehaviour
         _goesLeft = goesLeft;
         if (goesLeft)
         {
-            transform.position = new Vector3(_limitsLeftRight.y, spawnY, transform.position.z);
+            transform.position = new Vector3(_limitsLeftRight.y + transform.position.x - _spriteRenderer.bounds.min.x, spawnY, transform.position.z);
         }
         else
         {
-            transform.position = new Vector3(_limitsLeftRight.x, spawnY, transform.position.z);
+            transform.position = new Vector3(_limitsLeftRight.x + transform.position.x - _spriteRenderer.bounds.max.x, spawnY, transform.position.z);
         }
         _isEnabled = true;
     }
