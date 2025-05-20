@@ -13,6 +13,12 @@ public class Acte1Data : ScriptableObject
     public float trashScaledCD;
     [Header("TrashDatasScale")]
     public AnimationCurve trashSpawnCDScale;
+    public float timeBeforePointLoss;
+    public float timeBetweenPointLoss;
+    public float pointsLost;
+    [Header("TrashCombo")]
+    public float maxCombo;
+    public float comboAddValue;
 
     [Space(5)]
     [Header("PeopleDatasTime")]
@@ -21,7 +27,8 @@ public class Acte1Data : ScriptableObject
     public float peopleScaledCD;
     [Header("PeopleDatasRandomRange")]
     public Vector2 peopleSpeedRange;
-    public Vector2 peopleSizeRange;
+    public Vector2 peopleSizeXRange;
+    public Vector2 peopleSizeYRange;
     [Header("PeopleDatasScale")]
     public AnimationCurve peopleSpawnCDScale;
 

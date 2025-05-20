@@ -32,12 +32,15 @@ public class CreatePeople : MonoBehaviour
         _lastSpawnTime = Time.time;
         GameObject clone = Instantiate(_prefab, transform.position, Quaternion.identity);
         PeopleController peopleController = clone.GetComponent<PeopleController>();
+        clone.gameObject.SetActive(true);
         bool goesLeft = Random.value > 0.5f;
         float speed = Random.Range(_acte1Data.peopleSpeedRange.x, _acte1Data.peopleSpeedRange.y);
-        float size = Random.Range(_acte1Data.peopleSizeRange.x, _acte1Data.peopleSizeRange.y);
+        float sizeX = Random.Range(_acte1Data.peopleSizeXRange.x, _acte1Data.peopleSizeXRange.y);
+        float sizeY = Random.Range(_acte1Data.peopleSizeYRange.x, _acte1Data .peopleSizeYRange.y);
         float spawnY = Random.Range(-_spawnPeopleBox.y/2 + _spawnPeopleOffset.y, _spawnPeopleBox.y/2 + _spawnPeopleOffset.y);
         Vector2 limitsLeftRight = new Vector2(-_spawnPeopleBox.x/2 + _spawnPeopleOffset.x, _spawnPeopleBox.x/2 + _spawnPeopleOffset.x);
-        peopleController.DataUpdate(size, goesLeft, speed, spawnY, limitsLeftRight);
+        peopleController.DataUpdate(sizeX, sizeY, goesLeft, speed, spawnY, limitsLeftRight);
+
         clone.transform.SetParent(transform);
     }
 

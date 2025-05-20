@@ -1,11 +1,15 @@
+using System;
 using UnityEngine;
 
 public class PeopleController : MonoBehaviour
 {
+    [SerializeField] private PlayerControllerV2 _playerController;
+
     private BoxCollider2D _collider2D;
     private Rigidbody2D _rb;
+    private SpriteRenderer _spriteRenderer;
 
-    public bool _isEnabled = false;
+    [NonSerialized] public bool _isEnabled = false;
     private Vector2 _boundsLeftRight;
     private Vector2 _limitsLeftRight;
     private bool _goesLeft;
@@ -16,6 +20,7 @@ public class PeopleController : MonoBehaviour
     {
         TryGetComponent(out _collider2D);
         TryGetComponent(out _rb);
+        TryGetComponent(out _spriteRenderer);
     }
 
     private void Update()
@@ -40,22 +45,31 @@ public class PeopleController : MonoBehaviour
                 }
             }
         }
+
+        if(_collider2D.bounds.Contains(new Vector2(transform.position.x, transform.position.y) + _playerController._playerPoint))
+        {
+            _spriteRenderer.color = new Color(_spriteRenderer.color.r, _spriteRenderer.color.g, _spriteRenderer.color.b, 0.5f);
+        }
+        else
+        {
+            _spriteRenderer.color = new Color(_spriteRenderer.color.r, _spriteRenderer.color.g, _spriteRenderer.color.b, 1f);
+        }
     }
 
-    public void DataUpdate(float size, bool goesLeft, float speed, float spawnY, Vector2 limits)
+    public void DataUpdate(float sizeX, float sizeY, bool goesLeft, float speed, float spawnY, Vector2 limits)
     {
-        transform.localScale = new Vector3(size, transform.localScale.y, transform.localScale.z);
+        transform.localScale = new Vector3(sizeX, sizeY, transform.localScale.z);
         _boundsLeftRight = new Vector2(_collider2D.bounds.min.x, _collider2D.bounds.max.x);
         _limitsLeftRight = limits;
         _moveSpeed = speed;
         _goesLeft = goesLeft;
         if (goesLeft)
         {
-            transform.position = new Vector3(_limitsLeftRight.y + _collider2D.size.x/2, spawnY, transform.position.z);
+            transform.position = new Vector3(_limitsLeftRight.y, spawnY, transform.position.z);
         }
         else
         {
-            transform.position = new Vector3(_limitsLeftRight.x - _collider2D.size.x/2, spawnY, transform.position.z);
+            transform.position = new Vector3(_limitsLeftRight.x, spawnY, transform.position.z);
         }
         _isEnabled = true;
     }

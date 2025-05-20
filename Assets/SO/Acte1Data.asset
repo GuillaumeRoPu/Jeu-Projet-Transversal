@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Acte1Data
   m_EditorClassIdentifier: 
   acte1Timer: 60
+  trashBaseValue: 10
   trashSpawnCD: 5
   trashScaledCD: 1
   trashSpawnCDScale:
@@ -39,11 +40,15 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  timeBeforePointLoss: 2
+  timeBetweenPointLoss: 1
+  pointsLost: 1
   peopleCanSpawnTimer: 5
-  peopleSpawnCD: 5
+  peopleSpawnCD: 1
   peopleScaledCD: 1
   peopleSpeedRange: {x: 2, y: 5}
-  peopleSizeRange: {x: 3, y: 10}
+  peopleSizeXRange: {x: 2, y: 8}
+  peopleSizeYRange: {x: 1, y: 2}
   peopleSpawnCDScale:
     serializedVersion: 2
     m_Curve:
@@ -68,5 +73,5 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  trashCollected: 23
+  trashCollected: 0
   score: 0
