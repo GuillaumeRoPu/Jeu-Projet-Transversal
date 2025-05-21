@@ -1,4 +1,4 @@
-using Unity.Hierarchy;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
@@ -6,9 +6,11 @@ public class GameManager : MonoBehaviour {
     public static GameManager Instance;
 
     public int score = 0;
+    public int dechetMax;
     public int dechetRestant;
+    public int chaine;
 
-    [SerializeField] private GameObject[] _preFab;
+    [SerializeField] private GameObject _preFab;
     [SerializeField] private string _tagToCheck;
     [SerializeField] private Vector3 _respawnPosition;
 
@@ -24,6 +26,12 @@ public class GameManager : MonoBehaviour {
             Destroy(gameObject);
     }
 
+    private void Start()
+    {
+        dechetRestant = dechetMax;
+        chaine = 0;
+    }
+
     void Update() {
         createDechet();
         UpdateUi();
@@ -33,7 +41,7 @@ public class GameManager : MonoBehaviour {
         if (dechetRestant > 0) {
             GameObject[] remaining = GameObject.FindGameObjectsWithTag(_tagToCheck);
             if (remaining.Length == 0) {
-                GameObject instance = Instantiate(_preFab[Random.Range(0, _preFab.Length)], _respawnPosition, _preFab[0].transform.rotation);
+                GameObject instance = Instantiate(_preFab, _respawnPosition, _preFab.transform.rotation);
                 Debug.Log("Nouveau " + _tagToCheck + " instancié !");
                 dechetRestant -= 1;
             }
@@ -42,6 +50,6 @@ public class GameManager : MonoBehaviour {
 
     public void UpdateUi() {
         _uiScore.UpdateDisplayScore(score.ToString());
-        _uiDechetRestant.UpdateDisplayDechetRestant(dechetRestant.ToString());
+        _uiDechetRestant.UpdateDisplayDechetRestant(dechetRestant,dechetMax);
     }
 }

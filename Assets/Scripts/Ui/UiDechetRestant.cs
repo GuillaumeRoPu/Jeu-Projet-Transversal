@@ -1,16 +1,15 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UiDechetRestant : MonoBehaviour {
-    private TMP_Text DisplayDechetRestant;
+    private Slider DisplayDechetRestant;
 
-    private void Start()
-    {
-        DisplayDechetRestant = GetComponent<TMP_Text>();
+    private void Start() {
+        DisplayDechetRestant = GetComponent<Slider>();
     }
 
-    public void UpdateDisplayDechetRestant(string DechetRestant)
-    {
-        DisplayDechetRestant.text = DechetRestant;
+    public void UpdateDisplayDechetRestant(float DechetRestant, float DechetMax) {
+        DisplayDechetRestant.value = DechetRestant / DechetMax;
     }
 }
