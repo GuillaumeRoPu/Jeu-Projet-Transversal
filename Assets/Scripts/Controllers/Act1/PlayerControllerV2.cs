@@ -4,6 +4,7 @@ public class PlayerControllerV2 : MonoBehaviour
 {
     [SerializeField] private Acte1Data _acte1Data;
     [SerializeField] private ComboUI _comboUI;
+    [SerializeField] private SprintUI _sprintUI;
 
     private Transform _transform;
     private Collider2D _collider;
@@ -118,6 +119,7 @@ public class PlayerControllerV2 : MonoBehaviour
             _isSprinting = false;
             _sprintingParticles.Stop();
         }
+        _sprintUI.UpdateSprintDisplay(_updatedSprintDuration, _sprintDuration, _updatedSprintCD, _sprintCD, _isSprinting);
         _updatedMoveSpeed *= _updatedSprintMultiplicator;
     }
 
