@@ -76,5 +76,5 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  trashCollected: 0
-  score: 0
+  trashCollected: 24
+  score: 266.4
