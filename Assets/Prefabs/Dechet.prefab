@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1798579326887598160}
   - component: {fileID: 5059647347472336746}
-  - component: {fileID: -4139332069492481735}
+  - component: {fileID: 7955855820054079975}
   - component: {fileID: -7069548565235033798}
   - component: {fileID: 5237863052890701580}
   m_Layer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -90,8 +90,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &-4139332069492481735
-CircleCollider2D:
+--- !u!70 &7955855820054079975
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -125,7 +125,8 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 1}
+  m_Direction: 0
 --- !u!50 &-7069548565235033798
 Rigidbody2D:
   serializedVersion: 5
@@ -166,5 +167,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  dechetRecyclable:
+  - {fileID: 4560547442310702961, guid: 08a27837d0d21e646b9ffc262e5559e1, type: 3}
+  - {fileID: -2490643737981426528, guid: 08a27837d0d21e646b9ffc262e5559e1, type: 3}
+  - {fileID: 7891500719110605754, guid: 08a27837d0d21e646b9ffc262e5559e1, type: 3}
+  - {fileID: 4096802873336398953, guid: 08a27837d0d21e646b9ffc262e5559e1, type: 3}
+  - {fileID: 4258144385436934914, guid: 08a27837d0d21e646b9ffc262e5559e1, type: 3}
+  dechetNonRecyclable:
+  - {fileID: 8774693922253836290, guid: 08a27837d0d21e646b9ffc262e5559e1, type: 3}
+  - {fileID: 7681866453925369965, guid: 08a27837d0d21e646b9ffc262e5559e1, type: 3}
+  - {fileID: -6817716929212688263, guid: 08a27837d0d21e646b9ffc262e5559e1, type: 3}
+  - {fileID: 8218947593299493269, guid: 08a27837d0d21e646b9ffc262e5559e1, type: 3}
+  - {fileID: -7440052233398020887, guid: 08a27837d0d21e646b9ffc262e5559e1, type: 3}
+  dechetVerre:
+  - {fileID: -5082447267041764040, guid: 08a27837d0d21e646b9ffc262e5559e1, type: 3}
+  - {fileID: 7526058668265727491, guid: 08a27837d0d21e646b9ffc262e5559e1, type: 3}
   _gravityScale: 0.1
   _gravityStart: 0.5

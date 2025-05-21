@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class DechetsController : BaseController {
 
@@ -6,6 +7,9 @@ public class DechetsController : BaseController {
     private GameManager _gameManager;
     private Rigidbody2D _rigidbody;
     private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Sprite[] dechetRecyclable;
+    [SerializeField] private Sprite[] dechetNonRecyclable;
+    [SerializeField] private Sprite[] dechetVerre;
     [SerializeField] private float _gravityScale;
     [SerializeField] private float _gravityStart;
     private float _temp;
@@ -30,15 +34,16 @@ public class DechetsController : BaseController {
 
         switch (_temp) {
             case 0:
-                _spriteRenderer.color = Color.yellow;
+                _spriteRenderer.sprite = dechetRecyclable[Random.Range(0,dechetRecyclable.Length)];
+                _spriteRenderer.color = new Color(229, 226, 72);
                 type = TYPE.RECYCLABLE;
                 break;
             case 1:
-                _spriteRenderer.color = Color.green;
+                _spriteRenderer.sprite = dechetVerre[Random.Range(0, dechetVerre.Length)];
                 type = TYPE.VERRE;
                 break;
             case 2:
-                _spriteRenderer.color = Color.black;
+                _spriteRenderer.sprite = dechetNonRecyclable[Random.Range(0, dechetNonRecyclable.Length)];
                 type = TYPE.NONRECYCLABLE;
                 break;
         }
