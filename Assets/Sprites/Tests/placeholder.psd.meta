@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9585b078e3920004cbfd2e4ef975bc0f
+guid: 42b0d390c7ade9d4f90840ebd7fdfdff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3800465023895847294
-    second: barrecontour_0
+      213: -6674868978544099146
+    second: placeholder_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: barrecontour_0
+      name: placeholder_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 70
-        height: 838
+        width: 1181
+        height: 1181
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e71cb92bdc6fdb430800000000000000
-      internalID: 3800465023895847294
+      spriteID: 6b0ca9b670a1e53a0800000000000000
+      internalID: -6674868978544099146
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      barrecontour_0: 3800465023895847294
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

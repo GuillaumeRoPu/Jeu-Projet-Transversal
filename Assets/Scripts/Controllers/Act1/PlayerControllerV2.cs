@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerControllerV2 : MonoBehaviour
 {
     [SerializeField] private Acte1Data _acte1Data;
+    [SerializeField] private ComboUI _comboUI;
 
     private Transform _transform;
     private Collider2D _collider;
@@ -10,6 +11,8 @@ public class PlayerControllerV2 : MonoBehaviour
 
     [Space(5)]
     [Header("Move Stats")]
+    [SerializeField] private Vector2 _minMaxPositionBox;
+    [SerializeField] private Vector2 _minMaxPositionOffset;
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _slowedMoveSpeed;
     private float _updatedMoveSpeed = 3f;
@@ -73,6 +76,14 @@ public class PlayerControllerV2 : MonoBehaviour
         Move();
     }
 
+    private void LateUpdate()
+    {
+        Vector3 pos = transform.position;
+        pos.x = Mathf.Clamp(pos.x, -_minMaxPositionBox.x/2 + _minMaxPositionOffset.x, _minMaxPositionBox.x/ 2 + _minMaxPositionOffset.x);
+        pos.y = Mathf.Clamp(pos.y, -_minMaxPositionBox.y/ 2 + _minMaxPositionOffset.y, _minMaxPositionBox.y/ 2 + _minMaxPositionOffset.y);
+        transform.position = pos;
+    }
+
     private void Move()
     {
         Vector2 checkPosition = new Vector2(transform.position.x, transform.position.y) + _playerPoint;
@@ -130,8 +141,8 @@ public class PlayerControllerV2 : MonoBehaviour
         {
             Debug.LogError("Neuille frr");
         }
-        _acte1Data.score += trashController._value * _comboValue;
-        ShowPickupText(trashController._value * _comboValue);
+        _acte1Data.score += trashController._value * _comboValue * 10;
+        ShowPickupText(trashController._value * _comboValue * 10);
         trashController.Delete();
     }
 
@@ -154,6 +165,7 @@ public class PlayerControllerV2 : MonoBehaviour
             if (_comboValue == 1)
                 _comboTimer = 0;
         }
+        _comboUI.UpdateComboDisplay(_comboTimer, _acte1Data.comboTimeDecrease);
     }
 
     void ShowPickupText(float value)
@@ -186,5 +198,7 @@ public class PlayerControllerV2 : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(new Vector2(transform.position.x, transform.position.y) + _playerPoint, 0.5f);
+        Gizmos.color = Color.black;
+        Gizmos.DrawWireCube(_minMaxPositionOffset, _minMaxPositionBox);
     }
 }

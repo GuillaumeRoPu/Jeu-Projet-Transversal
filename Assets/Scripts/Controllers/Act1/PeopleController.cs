@@ -54,6 +54,7 @@ public class PeopleController : MonoBehaviour
         {
             _spriteRenderer.color = new Color(_spriteRenderer.color.r, _spriteRenderer.color.g, _spriteRenderer.color.b, 1f);
         }
+        Debug.Log("Alpha changed");
     }
 
     public void DataUpdate(float sizeX, float sizeY, bool goesLeft, float speed, float spawnY, Vector2 limits)
