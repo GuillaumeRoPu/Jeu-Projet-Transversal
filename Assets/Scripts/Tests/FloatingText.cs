@@ -8,7 +8,7 @@ public class FloatingText : MonoBehaviour
     public float floatSpeed = 1f;
     public TextMeshProUGUI text;
 
-    private float timer;
+    private float timer = 0f;
 
     void Update()
     {
@@ -30,6 +30,7 @@ public class FloatingText : MonoBehaviour
 
     public void SetText(string message)
     {
+        Debug.Log(message);
         text.text = message;
     }
 }
