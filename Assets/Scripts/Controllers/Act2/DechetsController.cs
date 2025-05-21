@@ -35,7 +35,6 @@ public class DechetsController : BaseController {
         switch (_temp) {
             case 0:
                 _spriteRenderer.sprite = dechetRecyclable[Random.Range(0,dechetRecyclable.Length)];
-                _spriteRenderer.color = new Color(229, 226, 72);
                 type = TYPE.RECYCLABLE;
                 break;
             case 1:
