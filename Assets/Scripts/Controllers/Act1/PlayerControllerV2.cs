@@ -42,7 +42,7 @@ public class PlayerControllerV2 : MonoBehaviour
     private Collider2D currentCollider;
 
     [Space(5)]
-    [Header("Tests")]
+    [Header("UI")]
     [SerializeField] private GameObject _floatingTextPrefab;
     [SerializeField] private Transform _canvas;
 
@@ -59,6 +59,7 @@ public class PlayerControllerV2 : MonoBehaviour
     private void Start()
     {
         _sprintingParticles.Stop();
+        _comboValue = 1;
     }
 
     void Update()
@@ -70,7 +71,6 @@ public class PlayerControllerV2 : MonoBehaviour
         if (isInTrigger && Input.GetKeyDown(KeyCode.E))
         {
             PickUpTrash(currentCollider);
-            ComboAdd();
         }
         Combo();
         Move();
@@ -143,6 +143,7 @@ public class PlayerControllerV2 : MonoBehaviour
         }
         _acte1Data.score += trashController._value * _comboValue * 10;
         ShowPickupText(trashController._value * _comboValue * 10);
+        ComboAdd();
         trashController.Delete();
     }
 
@@ -151,19 +152,26 @@ public class PlayerControllerV2 : MonoBehaviour
         _comboTimer = _acte1Data.comboTimeDecrease;
         _comboValue += _acte1Data.comboAddValue;
         _comboValue = Mathf.Clamp(_comboValue, 1, _acte1Data.maxCombo);
+        _comboUI._addTimer = true;
+        _comboUI.SetText(true, "x" + _comboValue);
     }
 
     private void Combo()
     {
         if (_comboValue > 1)
             _comboTimer -= Time.deltaTime;
-        if (_comboTimer < 0 && _comboValue > 1)
+        if (_comboTimer <= 0 && _comboValue > 1)
         {
             _comboValue -= _acte1Data.comboAddValue;
             _comboValue = Mathf.Clamp(_comboValue, 1, _acte1Data.maxCombo);
             _comboTimer = _acte1Data.comboTimeDecrease;
+            _comboUI.SetText(false, "x" + _comboValue);
             if (_comboValue == 1)
+            {
+                Debug.Log("Lost Combo");
                 _comboTimer = 0;
+                _comboUI._addTimer = true;
+            }
         }
         _comboUI.UpdateComboDisplay(_comboTimer, _acte1Data.comboTimeDecrease);
     }
@@ -174,6 +182,7 @@ public class PlayerControllerV2 : MonoBehaviour
         textObj.transform.SetParent(_canvas);
         textObj.SetActive(true);
         textObj.GetComponent<FloatingText>().SetText("+ " + value);
+
     }
 
     private void OnTriggerStay2D(Collider2D other)
