@@ -594,7 +594,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6968a33d1147fa649b5169fca8c04eba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DisplayDechetRestant: {fileID: 608890773}
 --- !u!1 &706093579
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,17 +849,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 756355604}
   m_CullTransparentMesh: 1
---- !u!114 &868356099 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6521304059077458671, guid: 90005e5faaab66a4c8c606c123582d78, type: 3}
-  m_PrefabInstance: {fileID: 2605178764379116804}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6968a33d1147fa649b5169fca8c04eba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &902490379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1391,8 +1379,8 @@ MonoBehaviour:
   _preFab: {fileID: 2762643886776090776, guid: e6b131c3fd169c84583d4dba9e30156e, type: 3}
   _tagToCheck: Dechet
   _respawnPosition: {x: 0, y: 5, z: 0}
-  _uiScore: {fileID: 0}
-  _uiDechetRestant: {fileID: 868356099}
+  _uiScore: {fileID: 2014430697}
+  _uiDechetRestant: {fileID: 608890774}
 --- !u!4 &2011367009
 Transform:
   m_ObjectHideFlags: 0
@@ -1417,6 +1405,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2014430697 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 55711684880106323, guid: 90005e5faaab66a4c8c606c123582d78, type: 3}
+  m_PrefabInstance: {fileID: 2605178764379116804}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89b6bff4b80f06846b70686000cd2395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2115450108
