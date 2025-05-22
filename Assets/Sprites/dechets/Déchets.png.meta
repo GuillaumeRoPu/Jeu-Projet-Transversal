@@ -409,7 +409,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "D\xE9chets_0": 4560547442310702961
+      "D\xE9chets_1": -5082447267041764040
+      "D\xE9chets_10": 4096802873336398953
+      "D\xE9chets_11": 7526058668265727491
+      "D\xE9chets_2": 8774693922253836290
+      "D\xE9chets_3": 7891500719110605754
+      "D\xE9chets_4": -2490643737981426528
+      "D\xE9chets_5": 8218947593299493269
+      "D\xE9chets_6": -6817716929212688263
+      "D\xE9chets_7": 4258144385436934914
+      "D\xE9chets_8": 7681866453925369965
+      "D\xE9chets_9": -7440052233398020887
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

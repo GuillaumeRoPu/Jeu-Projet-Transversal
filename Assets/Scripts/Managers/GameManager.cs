@@ -1,21 +1,22 @@
 using JetBrains.Annotations;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static UnityEditor.Progress;
 
 public class GameManager : MonoBehaviour {
 
     public static GameManager Instance;
 
-    public float score = 0;
-    public float scoreAct1 = 0;
-    public float scoreAct2 = 0;
+    [HideInInspector] public float score = 0;
+    [HideInInspector] public float scoreAct1 = 0;
+    [HideInInspector] public float scoreAct2 = 0;
     [SerializeField] private float scoreScaleCombot;
     public int dechetMax;
-    public int dechetBienTrie;
+    [HideInInspector] public int dechetBienTrie;
     public int dechetRestant;
-    public int chaine;
-    public int chaineMax;
+    [HideInInspector] public int chaine;
+    [HideInInspector] public int chaineMax;
 
     [SerializeField] private GameObject[] _preFabRecicl;
     [SerializeField] private GameObject[] _preFabNonRecicl;
@@ -27,6 +28,9 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private GameObject[] CanvasHUD;
     [SerializeField] private UiScore _uiScore;
     [SerializeField] private UiDechetRestant _uiDechetRestant;
+    [SerializeField] private float couldownInterDechet;
+    private float couldown;
+
 
     private void Awake() {
         if (Instance == null)
@@ -37,6 +41,7 @@ public class GameManager : MonoBehaviour {
 
     private void Start() {
         dechetRestant = dechetMax;
+        Time.timeScale = 0;
         RestChaine();
     }
 
@@ -44,20 +49,22 @@ public class GameManager : MonoBehaviour {
         score = scoreAct1 + scoreAct2;
         createDechet();
         UpdateUi();
+        couldown += Time.deltaTime;
     }
 
     public void createDechet() {
-        if (dechetRestant > 0) {
+        if (dechetRestant >= 0) {
             GameObject[] remaining = GameObject.FindGameObjectsWithTag(_tagToCheck);
-            if (remaining.Length == 0) {
+            if (remaining.Length == 0 || couldown > 5) {
+                couldown = 0;
                 GameObject instance = Instantiate(ChoosePreFab(), _respawnPosition, ChoosePreFab().transform.rotation);
                 Debug.Log("Nouveau " + _tagToCheck + " instancié !");
                 dechetRestant -= 1;
             }
         } else {
             Time.timeScale = 0;
-            CanvasMenu[2].gameObject.SetActive(true);
-            CanvasMenu[2].gameObject.GetComponent<VictoirneScreen>().DisplayFinal(score.ToString(),scoreAct1.ToString(),scoreAct2.ToString(),dechetMax.ToString(), dechetBienTrie.ToString(),chaineMax.ToString());
+            CanvasMenu[1].gameObject.SetActive(true);
+            CanvasMenu[1].gameObject.GetComponent<VictoirneScreen>().DisplayFinal(score.ToString(),scoreAct1.ToString(),scoreAct2.ToString(),dechetMax.ToString(), dechetBienTrie.ToString(),chaineMax.ToString());
             foreach (GameObject Hud in CanvasHUD) {
                 Hud.SetActive(false);
             }
@@ -68,7 +75,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void UpScore() {
-        scoreAct2 += chaine * scoreScaleCombot + 5;
+        scoreAct2 += chaine * scoreScaleCombot + 70;
     }
     public void UpChaine() {
         chaine += 1;
@@ -101,5 +108,16 @@ public class GameManager : MonoBehaviour {
                 break;
         }
         return pref;
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void StartMiniJeu()
+    {
+        CanvasMenu[0].gameObject.SetActive(false);
+        Time.timeScale = 1.0f;
     }
 }

@@ -277,7 +277,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -889, y: 42.575}
+  m_AnchoredPosition: {x: -882, y: 42.57495}
   m_SizeDelta: {x: -1804, y: -195.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4475629492076683581
@@ -366,8 +366,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 735.1195, y: 443.581}
-  m_SizeDelta: {x: 169.251, y: 93.867}
+  m_AnchoredPosition: {x: 889, y: 271}
+  m_SizeDelta: {x: 57.798, y: 490.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4948808326795224806
 CanvasRenderer:
@@ -456,7 +456,7 @@ MonoBehaviour:
   m_isCullingEnabled: 0
   m_horizontalMapping: 0
   m_verticalMapping: 0
-  m_uvLineOffset: 0
+  m_uvLineOffset: -1
   m_geometrySortingOrder: 0
   m_IsTextObjectScaleStatic: 0
   m_VertexBufferAutoSizeReduction: 0

@@ -263,11 +263,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2487199121121787157, guid: f3f9ae1413c63064cba4a4fa29c2beb2, type: 3}
   m_PrefabInstance: {fileID: 49144076}
   m_PrefabAsset: {fileID: 0}
---- !u!223 &216509367 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 2319141384818866660, guid: 6afbe4303df508e4ebca29ceec85ebcf, type: 3}
-  m_PrefabInstance: {fileID: 5157176918851025093}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &292624469 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7423624265943723553, guid: 90005e5faaab66a4c8c606c123582d78, type: 3}
@@ -486,6 +481,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1385812538}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!223 &455848882 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 9094063509505389798, guid: 6afbe4303df508e4ebca29ceec85ebcf, type: 3}
+  m_PrefabInstance: {fileID: 5157176918851025093}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &706093579
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,11 +1053,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5546934748104742559, guid: 90005e5faaab66a4c8c606c123582d78, type: 3}
   m_PrefabInstance: {fileID: 2605178764379116804}
   m_PrefabAsset: {fileID: 0}
---- !u!223 &1319329236 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 1257780409571104057, guid: 6afbe4303df508e4ebca29ceec85ebcf, type: 3}
-  m_PrefabInstance: {fileID: 5157176918851025093}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1385812537
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,8 +1252,8 @@ MonoBehaviour:
   score: 0
   scoreAct1: 0
   scoreAct2: 0
-  scoreScaleCombot: 0
-  dechetMax: 50
+  scoreScaleCombot: 8
+  dechetMax: 1
   dechetBienTrie: 0
   dechetRestant: 0
   chaine: 0
@@ -1281,14 +1276,14 @@ MonoBehaviour:
   _tagToCheck: Dechet
   _respawnPosition: {x: 0, y: 5, z: 0}
   CanvasMenu:
-  - {fileID: 1319329236}
-  - {fileID: 216509367}
+  - {fileID: 455848882}
   - {fileID: 1083376629}
   CanvasHUD:
   - {fileID: 292624469}
   - {fileID: 1160330443}
   _uiScore: {fileID: 2014430697}
   _uiDechetRestant: {fileID: 2605178764379116805}
+  couldownInterDechet: 0
 --- !u!4 &2011367009
 Transform:
   m_ObjectHideFlags: 0
@@ -1323,22 +1318,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3366480319236223979, guid: 90005e5faaab66a4c8c606c123582d78, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 136.44
-      objectReference: {fileID: 0}
-    - target: {fileID: 3366480319236223979, guid: 90005e5faaab66a4c8c606c123582d78, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 888.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4738318471922819787, guid: 90005e5faaab66a4c8c606c123582d78, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -882
-      objectReference: {fileID: 0}
-    - target: {fileID: 4738318471922819787, guid: 90005e5faaab66a4c8c606c123582d78, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 42.575
-      objectReference: {fileID: 0}
     - target: {fileID: 5438507580211434698, guid: 90005e5faaab66a4c8c606c123582d78, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1419,14 +1398,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7199078061027283111, guid: 90005e5faaab66a4c8c606c123582d78, type: 3}
-      propertyPath: m_fontSize
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199078061027283111, guid: 90005e5faaab66a4c8c606c123582d78, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 80
-      objectReference: {fileID: 0}
     - target: {fileID: 8515316013466897972, guid: 90005e5faaab66a4c8c606c123582d78, type: 3}
       propertyPath: m_Name
       value: HUDCanvas
@@ -1455,30 +1426,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 48636711480213896, guid: 6afbe4303df508e4ebca29ceec85ebcf, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 52539481204817631, guid: 6afbe4303df508e4ebca29ceec85ebcf, type: 3}
       propertyPath: m_Name
       value: MenuCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 1390145387169826675, guid: 6afbe4303df508e4ebca29ceec85ebcf, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2414476177787930864, guid: 6afbe4303df508e4ebca29ceec85ebcf, type: 3}
-      propertyPath: m_fontSize
-      value: 55
-      objectReference: {fileID: 0}
-    - target: {fileID: 2414476177787930864, guid: 6afbe4303df508e4ebca29ceec85ebcf, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 55
-      objectReference: {fileID: 0}
-    - target: {fileID: 8111348754275076073, guid: 6afbe4303df508e4ebca29ceec85ebcf, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 822440933914417194, guid: 6afbe4303df508e4ebca29ceec85ebcf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2011367008}
+    - target: {fileID: 8183514959958832623, guid: 6afbe4303df508e4ebca29ceec85ebcf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2011367008}
     - target: {fileID: 8211312985514122252, guid: 6afbe4303df508e4ebca29ceec85ebcf, type: 3}
       propertyPath: m_Pivot.x
       value: 0
