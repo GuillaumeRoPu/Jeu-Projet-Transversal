@@ -403,8 +403,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneTimer: {fileID: 1690214150}
   _acte1Data: {fileID: 11400000, guid: ed0349fa84492c141bdabee72181e88e, type: 2}
-  _spawnPeopleBox: {x: 23, y: 9.3}
-  _spawnPeopleOffset: {x: 0, y: 0}
+  _spawnPeopleBox: {x: 23, y: 6.68}
+  _spawnPeopleOffset: {x: 0, y: -0.99}
   _prefab: {fileID: 1092365342}
 --- !u!1 &169434983
 GameObject:
@@ -1212,7 +1212,7 @@ MonoBehaviour:
   _sceneTimer: {fileID: 1690214150}
   _acte1Data: {fileID: 11400000, guid: ed0349fa84492c141bdabee72181e88e, type: 2}
   _trashSpawnOrigin: {x: 0, y: -1.01}
-  _trashSpawnArea: {x: 15.4, y: 6.35}
+  _trashSpawnArea: {x: 15.4, y: 6.65}
   _prefab: {fileID: 447276988}
 --- !u!1 &479336731
 GameObject:
@@ -1506,7 +1506,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 510622444}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: dd2d29f67fe02d7498a4293f43bb11d9, type: 2}
   m_CullingMode: 0

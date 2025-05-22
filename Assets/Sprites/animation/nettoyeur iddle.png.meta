@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/animation/nettoyeur iddle.png.meta
 guid: e2046f30288c8d44da5dc1cf6e8670fe
 TextureImporter:
   internalIDToNameTable:
@@ -32,6 +33,14 @@ TextureImporter:
   - first:
       213: 8665557545736901454
     second: nettoyeur iddle_9
+========
+guid: 09abe78d5d0c2584f843910fb38a0ba5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7785243484360708815
+    second: Act1_combo_cadre_0
+>>>>>>>> main:Assets/Sprites/UI/Act1_combo_cadre.png.meta
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -127,6 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/animation/nettoyeur iddle.png.meta
       name: nettoyeur iddle_0
       rect:
         serializedVersion: 2
@@ -134,6 +144,15 @@ TextureImporter:
         y: 1107
         width: 330
         height: 941
+========
+      name: Act1_combo_cadre_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 459
+        height: 70
+>>>>>>>> main:Assets/Sprites/UI/Act1_combo_cadre.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,6 +161,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:Assets/Sprites/animation/nettoyeur iddle.png.meta
       spriteID: df72493d589397330800000000000000
       internalID: 3709059015059449853
       vertices: []
@@ -342,6 +362,10 @@ TextureImporter:
       bones: []
       spriteID: e439a5efcae324870800000000000000
       internalID: 8665557545736901454
+========
+      spriteID: 13d61c88c4245f390800000000000000
+      internalID: -7785243484360708815
+>>>>>>>> main:Assets/Sprites/UI/Act1_combo_cadre.png.meta
       vertices: []
       indices: 
       edges: []
