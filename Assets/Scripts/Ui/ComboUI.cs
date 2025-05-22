@@ -19,7 +19,7 @@ public class ComboUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _text;
 
 
-    private void Start()
+    private void OnEnable()
     {
         _timerFade = 0f;
         _addTimer = false;
@@ -45,7 +45,6 @@ public class ComboUI : MonoBehaviour
         else
             _timerFade -= Time.deltaTime;
         _timerFade = Mathf.Clamp(_timerFade, 0f, 1f);
-        Debug.Log(_timerFade);
     }
 
     public void SetText(bool increase, string message)

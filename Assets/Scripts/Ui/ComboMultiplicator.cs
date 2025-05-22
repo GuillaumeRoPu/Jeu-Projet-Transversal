@@ -9,7 +9,7 @@ public class ComboMultiplicator : MonoBehaviour
     private float _timer;
     private bool _reverse;
 
-    private void Start()
+    private void OnEnable()
     {
         _animationSpeed = 0.2f;
         _timer = 0f;

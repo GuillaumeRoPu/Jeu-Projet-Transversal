@@ -13,7 +13,7 @@ public class TrashController : MonoBehaviour
         TryGetComponent(out _spriteRenderer);
     }
 
-    private void Start()
+    private void OnEnable()
     {
         _value = _acte1.trashBaseValue;
         _timer = 0;
