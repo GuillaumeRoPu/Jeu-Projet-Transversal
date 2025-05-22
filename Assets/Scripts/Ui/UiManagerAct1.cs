@@ -10,22 +10,30 @@ public class MainMenuManager : MonoBehaviour
 
     [SerializeField] private GameObject _mainMenuUI;
     [SerializeField] private GameObject _scoreMenuUI;
+    [SerializeField] private GameObject _tutorialMenuUI;
     [SerializeField] private TextMeshProUGUI _scoreText;
 
     void OnEnable()
     {
-        Time.timeScale = 0f; // Pause the game
+        Time.timeScale = 0f;
         _scoreMenuUI.SetActive(false);
+        _tutorialMenuUI.SetActive(false);
         _mainMenuUI.SetActive(true);
         Debug.Log("GameLaunched");
         Debug.Log(_sceneTimer.GetElapsedTime());
     }
 
-    public void StartGame()
+    public void EscapeMainMenu()
     {
         _mainMenuUI.SetActive(false);
-        Time.timeScale = 1f; // Resume the game
+        _tutorialMenuUI.SetActive(true);
     }
+
+    public void StartGame()
+    {
+        _tutorialMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+    }
 
     private void Update()
     {

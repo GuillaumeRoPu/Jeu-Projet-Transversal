@@ -181,7 +181,7 @@ public class PlayerControllerV2 : MonoBehaviour
             {
                 Debug.Log("Lost Combo");
                 _comboTimer = 0;
-                _comboUI._addTimer = true;
+                _comboUI._addTimer = false;
             }
         }
         _comboUI.UpdateComboDisplay(_comboTimer, _acte1Data.comboTimeDecrease);
