@@ -1,46 +1,7 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Sprites/animation/nettoyeur iddle.png.meta
 guid: e2046f30288c8d44da5dc1cf6e8670fe
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 3709059015059449853
-    second: nettoyeur iddle_0
-  - first:
-      213: 5120983082357164252
-    second: nettoyeur iddle_1
-  - first:
-      213: -3648431932697832580
-    second: nettoyeur iddle_2
-  - first:
-      213: -198756362699252380
-    second: nettoyeur iddle_3
-  - first:
-      213: -2287749603684518511
-    second: nettoyeur iddle_4
-  - first:
-      213: -2558917966238570446
-    second: nettoyeur iddle_5
-  - first:
-      213: -233891686308894520
-    second: nettoyeur iddle_6
-  - first:
-      213: -1895099538179328734
-    second: nettoyeur iddle_7
-  - first:
-      213: 7118364086929699207
-    second: nettoyeur iddle_8
-  - first:
-      213: 8665557545736901454
-    second: nettoyeur iddle_9
-========
-guid: 09abe78d5d0c2584f843910fb38a0ba5
-TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -7785243484360708815
-    second: Act1_combo_cadre_0
->>>>>>>> main:Assets/Sprites/UI/Act1_combo_cadre.png.meta
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -78,7 +39,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -87,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,16 +63,16 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -124,7 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -136,34 +97,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-<<<<<<<< HEAD:Assets/Sprites/animation/nettoyeur iddle.png.meta
       name: nettoyeur iddle_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1107
-        width: 330
-        height: 941
-========
-      name: Act1_combo_cadre_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 459
-        height: 70
->>>>>>>> main:Assets/Sprites/UI/Act1_combo_cadre.png.meta
+        y: 1108
+        width: 329
+        height: 940
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-<<<<<<<< HEAD:Assets/Sprites/animation/nettoyeur iddle.png.meta
-      spriteID: df72493d589397330800000000000000
-      internalID: 3709059015059449853
+      spriteID: 15891eb050aaf4f4ea6c3984ac4d35d0
+      internalID: 792243924
       vertices: []
       indices: 
       edges: []
@@ -172,20 +122,20 @@ TextureImporter:
       name: nettoyeur iddle_1
       rect:
         serializedVersion: 2
-        x: 377
-        y: 1103
-        width: 337
-        height: 945
+        x: 378
+        y: 1104
+        width: 335
+        height: 944
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cd80fa43bf2611740800000000000000
-      internalID: 5120983082357164252
+      spriteID: a47412199821c604c9332a23a4098c1f
+      internalID: -1011254403
       vertices: []
       indices: 
       edges: []
@@ -194,20 +144,20 @@ TextureImporter:
       name: nettoyeur iddle_2
       rect:
         serializedVersion: 2
-        x: 761
-        y: 1098
-        width: 341
-        height: 950
+        x: 762
+        y: 1099
+        width: 339
+        height: 949
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c739a58cc7a2e5dc0800000000000000
-      internalID: -3648431932697832580
+      spriteID: 2e20090c974092c4799f9b62d2590e73
+      internalID: 843500125
       vertices: []
       indices: 
       edges: []
@@ -216,20 +166,20 @@ TextureImporter:
       name: nettoyeur iddle_3
       rect:
         serializedVersion: 2
-        x: 1149
-        y: 1093
-        width: 347
-        height: 955
+        x: 1150
+        y: 1094
+        width: 345
+        height: 954
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 46d56742420ed3df0800000000000000
-      internalID: -198756362699252380
+      spriteID: 929ec5a3a276f6a4a82a087b6ea58c45
+      internalID: -1266152189
       vertices: []
       indices: 
       edges: []
@@ -238,20 +188,20 @@ TextureImporter:
       name: nettoyeur iddle_4
       rect:
         serializedVersion: 2
-        x: 1543
-        y: 1088
-        width: 352
-        height: 960
+        x: 1544
+        y: 1089
+        width: 350
+        height: 959
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 195f7514bd74040e0800000000000000
-      internalID: -2287749603684518511
+      spriteID: 2e2fae4d460812a4f9bcf4c10ef664f9
+      internalID: -1898704859
       vertices: []
       indices: 
       edges: []
@@ -261,19 +211,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 77
-        width: 352
-        height: 964
+        y: 78
+        width: 351
+        height: 962
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2382cfcdaa5ec7cd0800000000000000
-      internalID: -2558917966238570446
+      spriteID: a65a9d4158632d0418f5f62162b79082
+      internalID: -1835327148
       vertices: []
       indices: 
       edges: []
@@ -282,20 +232,20 @@ TextureImporter:
       name: nettoyeur iddle_6
       rect:
         serializedVersion: 2
-        x: 399
-        y: 81
-        width: 349
-        height: 960
+        x: 400
+        y: 82
+        width: 347
+        height: 958
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8c824a120cc01ccf0800000000000000
-      internalID: -233891686308894520
+      spriteID: 6e3cd1da1a45dfb44b09c72f76c64794
+      internalID: 1974345068
       vertices: []
       indices: 
       edges: []
@@ -304,20 +254,20 @@ TextureImporter:
       name: nettoyeur iddle_7
       rect:
         serializedVersion: 2
-        x: 796
-        y: 85
-        width: 345
-        height: 955
+        x: 797
+        y: 86
+        width: 343
+        height: 953
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 22570dcb20143b5e0800000000000000
-      internalID: -1895099538179328734
+      spriteID: a8654f7a16fd94c46a73812a0360f2d7
+      internalID: -323821539
       vertices: []
       indices: 
       edges: []
@@ -326,20 +276,20 @@ TextureImporter:
       name: nettoyeur iddle_8
       rect:
         serializedVersion: 2
-        x: 1188
-        y: 90
-        width: 341
-        height: 951
+        x: 1189
+        y: 91
+        width: 339
+        height: 949
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 781b75f1c6289c260800000000000000
-      internalID: 7118364086929699207
+      spriteID: be56bde44422ef24996fd421e0bb9a0b
+      internalID: -1928777296
       vertices: []
       indices: 
       edges: []
@@ -348,24 +298,20 @@ TextureImporter:
       name: nettoyeur iddle_9
       rect:
         serializedVersion: 2
-        x: 1576
-        y: 94
-        width: 336
-        height: 947
+        x: 1577
+        y: 95
+        width: 334
+        height: 945
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e439a5efcae324870800000000000000
-      internalID: 8665557545736901454
-========
-      spriteID: 13d61c88c4245f390800000000000000
-      internalID: -7785243484360708815
->>>>>>>> main:Assets/Sprites/UI/Act1_combo_cadre.png.meta
+      spriteID: 26e24bc0501927d46b77c8aad1650234
+      internalID: 1213925276
       vertices: []
       indices: 
       edges: []
@@ -374,7 +320,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 64623f0f559197e4394ccee929b5cd31
     internalID: 0
     vertices: []
     indices: 
@@ -383,7 +329,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      nettoyeur iddle_0: 792243924
+      nettoyeur iddle_1: -1011254403
+      nettoyeur iddle_2: 843500125
+      nettoyeur iddle_3: -1266152189
+      nettoyeur iddle_4: -1898704859
+      nettoyeur iddle_5: -1835327148
+      nettoyeur iddle_6: 1974345068
+      nettoyeur iddle_7: -323821539
+      nettoyeur iddle_8: -1928777296
+      nettoyeur iddle_9: 1213925276
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
