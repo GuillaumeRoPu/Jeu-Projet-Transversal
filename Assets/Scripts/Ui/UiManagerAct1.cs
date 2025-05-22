@@ -53,4 +53,11 @@ public class MainMenuManager : MonoBehaviour
         _scoreMenuUI.SetActive(false);
         SceneManager.LoadScene(name);
     }
+
+    public void Quit()
+    {
+        Debug.Log("Game is quitting...");
+        Application.Quit();
+    }
+
 }

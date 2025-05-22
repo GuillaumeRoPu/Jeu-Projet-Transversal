@@ -8,7 +8,6 @@ public class PlayerControllerV2 : MonoBehaviour
     [SerializeField] private ScoreUI _scoreUI;
 
     private Transform _transform;
-    private Collider2D _collider;
     private Rigidbody2D _rb;
     private Animator _anim;
 
@@ -53,7 +52,6 @@ public class PlayerControllerV2 : MonoBehaviour
     private void Awake()
     {
         TryGetComponent(out _transform);
-        TryGetComponent(out _collider);
         TryGetComponent(out _rb);
         TryGetComponent(out _anim);
     }
@@ -152,8 +150,8 @@ public class PlayerControllerV2 : MonoBehaviour
         {
             Debug.LogError("Neuille frr");
         }
-        _acte1Data.score += trashController._value * _comboValue * 10;
-        ShowPickupText(trashController._value * _comboValue * 10);
+        _acte1Data.score += (int)(trashController._value * _comboValue * 10);
+        ShowPickupText((int)(trashController._value * _comboValue * 10));
         ComboAdd();
         trashController.Delete();
     }
