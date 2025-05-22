@@ -401,6 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77c5ae87322838e46b5e6c9271644a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sceneTimer: {fileID: 1690214150}
   _acte1Data: {fileID: 11400000, guid: ed0349fa84492c141bdabee72181e88e, type: 2}
   _spawnPeopleBox: {x: 23, y: 9.3}
   _spawnPeopleOffset: {x: 0, y: 0}
@@ -1208,6 +1209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7fda461a5cc03643b1cfd5b318432cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sceneTimer: {fileID: 1690214150}
   _acte1Data: {fileID: 11400000, guid: ed0349fa84492c141bdabee72181e88e, type: 2}
   _trashSpawnOrigin: {x: 0, y: 0}
   _trashSpawnArea: {x: 15.4, y: 8.1}
@@ -1761,8 +1763,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -33.096, y: 0.00041628}
-  m_SizeDelta: {x: 266.19, y: 116.04}
+  m_AnchoredPosition: {x: 0.0001297, y: 0.00041628}
+  m_SizeDelta: {x: 332.38, y: 116.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &763736053
 MonoBehaviour:
@@ -2290,6 +2292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a638c9b672433954cb9dde3b9919e56e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sceneTimer: {fileID: 1690214150}
   _acte1Data: {fileID: 11400000, guid: ed0349fa84492c141bdabee72181e88e, type: 2}
   _timerBarFill: {fileID: 10401680}
   _startColor: {r: 0, g: 0.70156884, b: 1, a: 1}
@@ -3488,6 +3491,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1690214149}
+  - component: {fileID: 1690214150}
   m_Layer: 0
   m_Name: Datas
   m_TagString: Untagged
@@ -3510,6 +3514,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1690214150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690214148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ee6db7120fd4e24abcc15b515c08dff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1730382992 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8907981256742198373, guid: 480dd3a36088a7c45acbb85e53ae9525, type: 3}
@@ -3926,6 +3942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d513d2edb498114ba54e1937735f14e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sceneTimer: {fileID: 1690214150}
   _acte1Data: {fileID: 11400000, guid: ed0349fa84492c141bdabee72181e88e, type: 2}
   _mainMenuUI: {fileID: 466067441}
   _scoreMenuUI: {fileID: 457936866}

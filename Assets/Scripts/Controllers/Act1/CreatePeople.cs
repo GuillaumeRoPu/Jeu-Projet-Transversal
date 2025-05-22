@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class CreatePeople : MonoBehaviour
 {
+    [SerializeField] private SceneTimer _sceneTimer;
     [SerializeField] private Acte1Data _acte1Data;
 
     [SerializeField] private Vector2 _spawnPeopleBox;
@@ -14,10 +15,10 @@ public class CreatePeople : MonoBehaviour
 
     private void Update()
     {
-        _ratio = Time.time / _acte1Data.acte1Timer;
-        if (Time.time < _acte1Data.acte1Timer && _acte1Data.peopleCanSpawnTimer < Time.time)
+        _ratio = _sceneTimer.GetElapsedTime() / _acte1Data.acte1Timer;
+        if (_sceneTimer.GetElapsedTime() < _acte1Data.acte1Timer && _acte1Data.peopleCanSpawnTimer < _sceneTimer.GetElapsedTime())
         {
-            if (_lastSpawnTime + _peopleUpdatedCD < Time.time)
+            if (_lastSpawnTime + _peopleUpdatedCD < _sceneTimer.GetElapsedTime())
             {
                 Debug.Log("CreatedTrash");
                 CreatingPeople();
@@ -29,7 +30,7 @@ public class CreatePeople : MonoBehaviour
     //Creates a prefab people, transfers data to it to influence it's behavior, etc etc
     private void CreatingPeople()
     {
-        _lastSpawnTime = Time.time;
+        _lastSpawnTime = _sceneTimer.GetElapsedTime();
         GameObject clone = Instantiate(_prefab, transform.position, Quaternion.identity);
         PeopleController peopleController = clone.GetComponent<PeopleController>();
         clone.gameObject.SetActive(true);

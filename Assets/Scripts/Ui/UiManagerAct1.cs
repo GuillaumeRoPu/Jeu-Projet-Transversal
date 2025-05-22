@@ -5,17 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
+    [SerializeField] private SceneTimer _sceneTimer;
     [SerializeField] private Acte1Data _acte1Data;
 
     [SerializeField] private GameObject _mainMenuUI;
     [SerializeField] private GameObject _scoreMenuUI;
     [SerializeField] private TextMeshProUGUI _scoreText;
 
-    void Start()
+    void OnEnable()
     {
         Time.timeScale = 0f; // Pause the game
         _scoreMenuUI.SetActive(false);
         _mainMenuUI.SetActive(true);
+        Debug.Log("GameLaunched");
+        Debug.Log(_sceneTimer.GetElapsedTime());
     }
 
     public void StartGame()
@@ -26,7 +29,7 @@ public class MainMenuManager : MonoBehaviour
 
     private void Update()
     {
-        if (_acte1Data.acte1Timer + _acte1Data.tempsDeRepit < Time.time)
+        if (_acte1Data.acte1Timer + _acte1Data.tempsDeRepit < _sceneTimer.GetElapsedTime())
             ShowFinalScore();
     }
 
@@ -39,6 +42,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void LoadScene(string name)
     {
+        _scoreMenuUI.SetActive(false);
         SceneManager.LoadScene(name);
     }
 }
