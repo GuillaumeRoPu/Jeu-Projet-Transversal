@@ -5,6 +5,7 @@ public class PlayerControllerV2 : MonoBehaviour
     [SerializeField] private Acte1Data _acte1Data;
     [SerializeField] private ComboUI _comboUI;
     [SerializeField] private SprintUI _sprintUI;
+    [SerializeField] private ScoreUI _scoreUI;
 
     private Transform _transform;
     private Collider2D _collider;
@@ -72,6 +73,7 @@ public class PlayerControllerV2 : MonoBehaviour
         if (isInTrigger && Input.GetKeyDown(KeyCode.E))
         {
             PickUpTrash(currentCollider);
+            _scoreUI.AddTrashAndScore();
         }
         Combo();
         Move();

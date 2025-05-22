@@ -10,13 +10,6 @@ public class CreateTrash : MonoBehaviour
     private float _trashUpdatedCD;
     private float _lastSpawnTime;
 
-
-
-    private void Awake()
-    {
-        
-    }
-
     private void Start()
     {
         _lastSpawnTime = 0f;
