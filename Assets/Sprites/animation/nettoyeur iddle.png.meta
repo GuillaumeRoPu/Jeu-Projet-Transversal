@@ -1,13 +1,37 @@
 fileFormatVersion: 2
-guid: 3c277f61aa5f3b44fb9d393a3f3576f6
+guid: 5b972848e6752e44b9f384cdacafbe37
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8552569104405559926
-    second: Sans nom-1_0
+      213: 3709059015059449853
+    second: nettoyeur iddle_0
   - first:
-      213: 2239047261463926791
-    second: Sans nom-1_1
+      213: 5120983082357164252
+    second: nettoyeur iddle_1
+  - first:
+      213: -3648431932697832580
+    second: nettoyeur iddle_2
+  - first:
+      213: -198756362699252380
+    second: nettoyeur iddle_3
+  - first:
+      213: -2287749603684518511
+    second: nettoyeur iddle_4
+  - first:
+      213: -2558917966238570446
+    second: nettoyeur iddle_5
+  - first:
+      213: -233891686308894520
+    second: nettoyeur iddle_6
+  - first:
+      213: -1895099538179328734
+    second: nettoyeur iddle_7
+  - first:
+      213: 7118364086929699207
+    second: nettoyeur iddle_8
+  - first:
+      213: 8665557545736901454
+    second: nettoyeur iddle_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,133 +140,221 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sans nom-1_0
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 1099
-        width: 328
-        height: 944
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a850de686bb2f4980800000000000000
-      internalID: -8552569104405559926
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sans nom-1_1
+      name: nettoyeur iddle_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 130
-        width: 688
-        height: 958
+        y: 1107
+        width: 330
+        height: 941
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7085ede0f91b21f10800000000000000
-      internalID: 2239047261463926791
+      spriteID: df72493d589397330800000000000000
+      internalID: 3709059015059449853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sans nom-1_2
+      name: nettoyeur iddle_1
       rect:
         serializedVersion: 2
-        x: 663
-        y: 1094
-        width: 681
-        height: 954
+        x: 377
+        y: 1103
+        width: 337
+        height: 945
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6af6af954d27e454f9ecda5fe4329c22
-      internalID: -2084471609
+      spriteID: cd80fa43bf2611740800000000000000
+      internalID: 5120983082357164252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sans nom-1_3
+      name: nettoyeur iddle_2
       rect:
         serializedVersion: 2
-        x: 1345
-        y: 1089
-        width: 348
-        height: 959
+        x: 761
+        y: 1098
+        width: 341
+        height: 950
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 004a6ada2a9c60c4f9eda038f1ea088e
-      internalID: -567013378
+      spriteID: c739a58cc7a2e5dc0800000000000000
+      internalID: -3648431932697832580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sans nom-1_4
+      name: nettoyeur iddle_3
       rect:
         serializedVersion: 2
-        x: 1694
-        y: 1087
-        width: 351
-        height: 961
+        x: 1149
+        y: 1093
+        width: 347
+        height: 955
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e686155ddf433d9469daa9927da879cb
-      internalID: 1519045490
+      spriteID: 46d56742420ed3df0800000000000000
+      internalID: -198756362699252380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sans nom-1_5
+      name: nettoyeur iddle_4
       rect:
         serializedVersion: 2
-        x: 689
-        y: 139
-        width: 671
-        height: 949
+        x: 1543
+        y: 1088
+        width: 352
+        height: 960
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e7576ef49a5e9244fb5ece6b778a0e5d
-      internalID: -727872773
+      spriteID: 195f7514bd74040e0800000000000000
+      internalID: -2287749603684518511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nettoyeur iddle_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 77
+        width: 352
+        height: 964
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2382cfcdaa5ec7cd0800000000000000
+      internalID: -2558917966238570446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nettoyeur iddle_6
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 81
+        width: 349
+        height: 960
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c824a120cc01ccf0800000000000000
+      internalID: -233891686308894520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nettoyeur iddle_7
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 85
+        width: 345
+        height: 955
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22570dcb20143b5e0800000000000000
+      internalID: -1895099538179328734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nettoyeur iddle_8
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 90
+        width: 341
+        height: 951
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 781b75f1c6289c260800000000000000
+      internalID: 7118364086929699207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nettoyeur iddle_9
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 94
+        width: 336
+        height: 947
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e439a5efcae324870800000000000000
+      internalID: 8665557545736901454
       vertices: []
       indices: 
       edges: []
@@ -251,7 +363,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 07c0fb406c5285345ab2504452dae862
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -260,11 +372,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Sans nom-1_2: -2084471609
-      Sans nom-1_3: -567013378
-      Sans nom-1_4: 1519045490
-      Sans nom-1_5: -727872773
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

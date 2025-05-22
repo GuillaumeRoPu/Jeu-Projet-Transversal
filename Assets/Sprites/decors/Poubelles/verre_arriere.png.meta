@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      verre_arriere_0: 1720433509155357311
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

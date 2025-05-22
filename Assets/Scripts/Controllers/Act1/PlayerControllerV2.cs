@@ -10,6 +10,7 @@ public class PlayerControllerV2 : MonoBehaviour
     private Transform _transform;
     private Collider2D _collider;
     private Rigidbody2D _rb;
+    private Animator _anim;
 
     [Space(5)]
     [Header("Move Stats")]
@@ -54,6 +55,7 @@ public class PlayerControllerV2 : MonoBehaviour
         TryGetComponent(out _transform);
         TryGetComponent(out _collider);
         TryGetComponent(out _rb);
+        TryGetComponent(out _anim);
     }
 
     private void OnEnable()
