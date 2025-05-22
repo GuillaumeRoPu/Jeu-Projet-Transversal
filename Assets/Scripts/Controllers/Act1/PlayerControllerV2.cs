@@ -54,14 +54,16 @@ public class PlayerControllerV2 : MonoBehaviour
         TryGetComponent(out _transform);
         TryGetComponent(out _collider);
         TryGetComponent(out _rb);
-        _updatedMoveSpeed = _moveSpeed;
-        _updatedSprintCD = 0;
     }
 
-    private void Start()
+    private void OnEnable()
     {
         _sprintingParticles.Stop();
         _comboValue = 1;
+        _updatedMoveSpeed = _moveSpeed;
+        _updatedSprintCD = 0;
+        _updatedSprintMultiplicator = 1;
+        _isSprinting = false;
     }
 
     void Update()
@@ -107,11 +109,10 @@ public class PlayerControllerV2 : MonoBehaviour
         {
             _updatedSprintCD = 0;
             _isSprinting = true;
-            _updatedSprintMultiplicator = _sprintMultiplicator;
             _updatedSprintDuration = _sprintDuration;
             _sprintingParticles.Play(); ;
         }
-        if(_updatedSprintDuration >= 0)
+        if(_updatedSprintDuration > 0)
         {
             _updatedSprintMultiplicator = _sprintMultiplicator;
         }
