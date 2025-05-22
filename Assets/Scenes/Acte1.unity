@@ -1211,8 +1211,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneTimer: {fileID: 1690214150}
   _acte1Data: {fileID: 11400000, guid: ed0349fa84492c141bdabee72181e88e, type: 2}
-  _trashSpawnOrigin: {x: 0, y: 0}
-  _trashSpawnArea: {x: 15.4, y: 8.1}
+  _trashSpawnOrigin: {x: 0, y: -1.01}
+  _trashSpawnArea: {x: 15.4, y: 6.35}
   _prefab: {fileID: 447276988}
 --- !u!1 &479336731
 GameObject:
@@ -1275,12 +1275,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -32768
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.3262829, g: 0.5660378, b: 0.30170882, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 50c81f2fb6b2f484fa0b66385ba2542f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1295,8 +1295,8 @@ Transform:
   m_GameObject: {fileID: 479336731}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 26.22, y: 13.97, z: 9.94}
+  m_LocalPosition: {x: 0, y: 0.31, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1315,6 +1315,7 @@ GameObject:
   - component: {fileID: 510622448}
   - component: {fileID: 510622449}
   - component: {fileID: 510622450}
+  - component: {fileID: 510622451}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1410,8 +1411,8 @@ MonoBehaviour:
   _comboUI: {fileID: 1733132901}
   _sprintUI: {fileID: 807849901}
   _scoreUI: {fileID: 475274893}
-  _minMaxPositionBox: {x: 17, y: 10}
-  _minMaxPositionOffset: {x: 0, y: 0}
+  _minMaxPositionBox: {x: 17.6, y: 6.87}
+  _minMaxPositionOffset: {x: 0, y: -1.09}
   _moveSpeed: 3
   _slowedMoveSpeed: 1
   _sprintMultiplicator: 2
@@ -1497,6 +1498,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aae39e65719b89544bd0db506d4c0c61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &510622451
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510622444}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dd2d29f67fe02d7498a4293f43bb11d9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &517271659
 GameObject:
   m_ObjectHideFlags: 0

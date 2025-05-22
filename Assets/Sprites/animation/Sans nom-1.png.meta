@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ce8f55d85549c034688a6b28611ed13b
+guid: 3c277f61aa5f3b44fb9d393a3f3576f6
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -99,6 +99,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -106,12 +119,12 @@ TextureImporter:
       name: Sans nom-1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1086
-        width: 2046
-        height: 962
+        x: 2
+        y: 1099
+        width: 328
+        height: 944
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -129,11 +142,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 129
-        width: 1361
-        height: 960
+        y: 130
+        width: 688
+        height: 958
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -146,11 +159,99 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Sans nom-1_2
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 1094
+        width: 681
+        height: 954
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6af6af954d27e454f9ecda5fe4329c22
+      internalID: -2084471609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans nom-1_3
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 1089
+        width: 348
+        height: 959
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 004a6ada2a9c60c4f9eda038f1ea088e
+      internalID: -567013378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans nom-1_4
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 1087
+        width: 351
+        height: 961
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e686155ddf433d9469daa9927da879cb
+      internalID: 1519045490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sans nom-1_5
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 139
+        width: 671
+        height: 949
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7576ef49a5e9244fb5ece6b778a0e5d
+      internalID: -727872773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 07c0fb406c5285345ab2504452dae862
     internalID: 0
     vertices: []
     indices: 
@@ -159,7 +260,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sans nom-1_2: -2084471609
+      Sans nom-1_3: -567013378
+      Sans nom-1_4: 1519045490
+      Sans nom-1_5: -727872773
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
