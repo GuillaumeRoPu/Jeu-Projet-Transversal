@@ -10,6 +10,7 @@ public class PlayerControllerV2 : MonoBehaviour
     private Transform _transform;
     private Collider2D _collider;
     private Rigidbody2D _rb;
+    private Animator _anim;
 
     [Space(5)]
     [Header("Move Stats")]
@@ -33,7 +34,7 @@ public class PlayerControllerV2 : MonoBehaviour
     [field: SerializeField] public Vector2 _playerPoint { get; private set; }
     
 
-    private bool isFacingRight = true;
+    private bool isFacingRight = false;
     private Vector2 _moveInput;
     private float _direction;
 
@@ -54,6 +55,7 @@ public class PlayerControllerV2 : MonoBehaviour
         TryGetComponent(out _transform);
         TryGetComponent(out _collider);
         TryGetComponent(out _rb);
+        TryGetComponent(out _anim);
     }
 
     private void OnEnable()
@@ -71,7 +73,8 @@ public class PlayerControllerV2 : MonoBehaviour
         _moveInput.x = Input.GetAxisRaw("Horizontal");
         _moveInput.y = Input.GetAxisRaw("Vertical");
         _moveInput = _moveInput.normalized;
-        Flip();
+        if (Time.timeScale != 0)
+            Flip();
         if (isInTrigger && Input.GetKeyDown(KeyCode.E))
         {
             PickUpTrash(currentCollider);
@@ -79,6 +82,9 @@ public class PlayerControllerV2 : MonoBehaviour
         }
         Combo();
         Move();
+        _anim.SetFloat("velocityX", _moveInput.x);
+        _anim.SetFloat("velocityY", _moveInput.y);
+        _anim.SetBool("isSprinting", _isSprinting);
     }
 
     private void LateUpdate()
