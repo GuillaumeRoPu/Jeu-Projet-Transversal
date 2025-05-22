@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 50c81f2fb6b2f484fa0b66385ba2542f
+guid: d0b821f1dcf4ba54f9202f08951930dc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1521873222739313101
-    second: Act1Scene_protrans_0
+      213: -5406260402615372933
+    second: verre_avant_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Act1Scene_protrans_0
+      name: verre_avant_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1080
+        width: 497
+        height: 416
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc14e8202a7ce1510800000000000000
-      internalID: 1521873222739313101
+      spriteID: b73b9d2beca19f4b0800000000000000
+      internalID: -5406260402615372933
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Act1Scene_protrans_0: 1521873222739313101
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
