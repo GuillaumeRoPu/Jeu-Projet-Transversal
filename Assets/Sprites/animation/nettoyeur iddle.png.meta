@@ -372,7 +372,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      nettoyeur iddle_0: 3709059015059449853
+      nettoyeur iddle_1: 5120983082357164252
+      nettoyeur iddle_2: -3648431932697832580
+      nettoyeur iddle_3: -198756362699252380
+      nettoyeur iddle_4: -2287749603684518511
+      nettoyeur iddle_5: -2558917966238570446
+      nettoyeur iddle_6: -233891686308894520
+      nettoyeur iddle_7: -1895099538179328734
+      nettoyeur iddle_8: 7118364086929699207
+      nettoyeur iddle_9: 8665557545736901454
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
