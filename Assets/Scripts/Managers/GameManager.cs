@@ -1,8 +1,5 @@
-using JetBrains.Annotations;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static UnityEditor.Progress;
 
 public class GameManager : MonoBehaviour {
 

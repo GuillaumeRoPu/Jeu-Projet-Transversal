@@ -1,6 +1,5 @@
-
 using UnityEngine;
-using TMPro; // If you're using TextMeshPro
+using TMPro;
 
 public class FloatingText : MonoBehaviour
 {
