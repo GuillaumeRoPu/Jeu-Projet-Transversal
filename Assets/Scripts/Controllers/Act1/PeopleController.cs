@@ -52,9 +52,8 @@ public class PeopleController : MonoBehaviour
         }
         else
         {
-            _spriteRenderer.color = new Color(_spriteRenderer.color.r, _spriteRenderer.color.g, _spriteRenderer.color.b, 1f);
+            _spriteRenderer.color = new Color(_spriteRenderer.color.r, _spriteRenderer.color.g, _spriteRenderer.color.b, 0.8f);
         }
-        Debug.Log("Alpha changed");
     }
 
     public void DataUpdate(float sizeX, float sizeY, bool goesLeft, float speed, float spawnY, Vector2 limits)

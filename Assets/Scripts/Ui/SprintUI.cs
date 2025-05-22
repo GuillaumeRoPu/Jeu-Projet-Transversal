@@ -18,7 +18,7 @@ public class SprintUI : MonoBehaviour
         {
             _currentFill = updatedSprintDuration / baseSprintDuration;
         }
-        else
+        else if (!_isSprinting && updatedSprintDuration <= 0)
         {
             _currentFill = (sprintCDValue - baseSprintDuration) / (maxsprintCDValue - baseSprintDuration);
         }
