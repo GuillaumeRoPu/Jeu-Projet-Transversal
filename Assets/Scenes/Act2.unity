@@ -1337,6 +1337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73fcf6a6ffffe5442b5049dbf55a5dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Acte1Data: {fileID: 11400000, guid: ed0349fa84492c141bdabee72181e88e, type: 2}
   score: 0
   scoreAct1: 0
   scoreAct2: 0

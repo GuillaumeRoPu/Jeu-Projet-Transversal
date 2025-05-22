@@ -7,6 +7,7 @@ using static UnityEditor.Progress;
 public class GameManager : MonoBehaviour {
 
     public static GameManager Instance;
+    public Acte1Data Acte1Data;
 
     [HideInInspector] public float score = 0;
     [HideInInspector] public float scoreAct1 = 0;
@@ -39,9 +40,12 @@ public class GameManager : MonoBehaviour {
             Destroy(gameObject);
     }
 
-    private void Start() {
-        dechetRestant = dechetMax;
+    private void OnEnable() {
         Time.timeScale = 0;
+        dechetMax = Acte1Data.trashCollected;
+        scoreAct1 = Acte1Data.score;
+        dechetRestant = dechetMax;
+        CanvasMenu[1].gameObject.SetActive(false);
         RestChaine();
     }
 
@@ -88,7 +92,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void UpdateUi() {
-        _uiScore.UpdateDisplayScore(score.ToString());
+        _uiScore.UpdateDisplayScore(scoreAct2.ToString());
         _uiDechetRestant.UpdateDisplayDechetRestant(dechetRestant,dechetMax);
     }
 

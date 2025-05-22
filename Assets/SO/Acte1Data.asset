@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a80e5273ee7f2458ec33e1f2446537, type: 3}
   m_Name: Acte1Data
   m_EditorClassIdentifier: 
-  acte1Timer: 90
+  acte1Timer: 15
   tempsDeRepit: 10
   trashBaseValue: 10
   trashSpawnCD: 5
@@ -77,5 +77,5 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  trashCollected: 15
-  score: 1202
+  trashCollected: 6
+  score: 581
