@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1798579326887598160}
   - component: {fileID: 5059647347472336746}
-  - component: {fileID: -4139332069492481735}
+  - component: {fileID: 7955855820054079975}
   - component: {fileID: -7069548565235033798}
-  - component: {fileID: 5237863052890701580}
+  - component: {fileID: 9032227869316970415}
   m_Layer: 0
-  m_Name: Dechet
+  m_Name: Dechet cigarette
   m_TagString: Dechet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 1286755491190708062, guid: 6ce9866d5fb3e604fbe3ddf3a3ecc086, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -90,8 +90,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &-4139332069492481735
-CircleCollider2D:
+--- !u!70 &7955855820054079975
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -125,7 +125,8 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Size: {x: 0.605, y: 0.65}
+  m_Direction: 0
 --- !u!50 &-7069548565235033798
 Rigidbody2D:
   serializedVersion: 5
@@ -153,7 +154,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5237863052890701580
+--- !u!114 &9032227869316970415
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,9 +163,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2762643886776090776}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62996bb439219db489d1ed580cdf28fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 796a2e8c2de584747b4e77d8ae82acdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  type: 3
   _gravityScale: 0.1
   _gravityStart: 0.5

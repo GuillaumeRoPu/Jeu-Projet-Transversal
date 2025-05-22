@@ -5,6 +5,7 @@ public class Acte1Data : ScriptableObject
 {
     [Header("Acte1Data")]
     public float acte1Timer;
+    public float tempsDeRepit;
 
     [Space(5)]
     [Header("TrashDatas")]

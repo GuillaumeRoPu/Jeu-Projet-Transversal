@@ -4,6 +4,8 @@ public class PlayerControllerV2 : MonoBehaviour
 {
     [SerializeField] private Acte1Data _acte1Data;
     [SerializeField] private ComboUI _comboUI;
+    [SerializeField] private SprintUI _sprintUI;
+    [SerializeField] private ScoreUI _scoreUI;
 
     private Transform _transform;
     private Collider2D _collider;
@@ -42,7 +44,7 @@ public class PlayerControllerV2 : MonoBehaviour
     private Collider2D currentCollider;
 
     [Space(5)]
-    [Header("Tests")]
+    [Header("UI")]
     [SerializeField] private GameObject _floatingTextPrefab;
     [SerializeField] private Transform _canvas;
 
@@ -59,6 +61,7 @@ public class PlayerControllerV2 : MonoBehaviour
     private void Start()
     {
         _sprintingParticles.Stop();
+        _comboValue = 1;
     }
 
     void Update()
@@ -70,7 +73,7 @@ public class PlayerControllerV2 : MonoBehaviour
         if (isInTrigger && Input.GetKeyDown(KeyCode.E))
         {
             PickUpTrash(currentCollider);
-            ComboAdd();
+            _scoreUI.AddTrashAndScore();
         }
         Combo();
         Move();
@@ -118,6 +121,7 @@ public class PlayerControllerV2 : MonoBehaviour
             _isSprinting = false;
             _sprintingParticles.Stop();
         }
+        _sprintUI.UpdateSprintDisplay(_updatedSprintDuration, _sprintDuration, _updatedSprintCD, _sprintCD, _isSprinting);
         _updatedMoveSpeed *= _updatedSprintMultiplicator;
     }
 
@@ -143,6 +147,7 @@ public class PlayerControllerV2 : MonoBehaviour
         }
         _acte1Data.score += trashController._value * _comboValue * 10;
         ShowPickupText(trashController._value * _comboValue * 10);
+        ComboAdd();
         trashController.Delete();
     }
 
@@ -151,19 +156,26 @@ public class PlayerControllerV2 : MonoBehaviour
         _comboTimer = _acte1Data.comboTimeDecrease;
         _comboValue += _acte1Data.comboAddValue;
         _comboValue = Mathf.Clamp(_comboValue, 1, _acte1Data.maxCombo);
+        _comboUI._addTimer = true;
+        _comboUI.SetText(true, "x" + _comboValue);
     }
 
     private void Combo()
     {
         if (_comboValue > 1)
             _comboTimer -= Time.deltaTime;
-        if (_comboTimer < 0 && _comboValue > 1)
+        if (_comboTimer <= 0 && _comboValue > 1)
         {
             _comboValue -= _acte1Data.comboAddValue;
             _comboValue = Mathf.Clamp(_comboValue, 1, _acte1Data.maxCombo);
             _comboTimer = _acte1Data.comboTimeDecrease;
+            _comboUI.SetText(false, "x" + _comboValue);
             if (_comboValue == 1)
+            {
+                Debug.Log("Lost Combo");
                 _comboTimer = 0;
+                _comboUI._addTimer = true;
+            }
         }
         _comboUI.UpdateComboDisplay(_comboTimer, _acte1Data.comboTimeDecrease);
     }
@@ -174,6 +186,7 @@ public class PlayerControllerV2 : MonoBehaviour
         textObj.transform.SetParent(_canvas);
         textObj.SetActive(true);
         textObj.GetComponent<FloatingText>().SetText("+ " + value);
+
     }
 
     private void OnTriggerStay2D(Collider2D other)
